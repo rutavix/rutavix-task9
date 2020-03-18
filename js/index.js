@@ -22,3 +22,17 @@ function breathAnimation() {
 }
 
 setInterval(breathAnimation, totalTime);
+
+
+const display = document.getElementById('title');
+const button = document.getElementById('button');
+const time = 0;
+const myInterval;
+
+button.addEventListener('click', function(event){
+    clearInterval(myInterval)
+    myInterval = setInterval(function() {
+        time ++;
+        display.innerHTML = time;
+    }, 1000);
+})
